@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var Button1: UIButton!
+    @IBOutlet weak var textFieldOne: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        label1.text = "Hello!"
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +25,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func ButtonOne_touched(sender: AnyObject) {
+        label1.text = "Hello \(textFieldOne.text!)!"
+    }
 
 }
 
